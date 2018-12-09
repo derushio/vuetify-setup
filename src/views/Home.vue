@@ -12,5 +12,5 @@ export default class Home extends Vue {}
 <style lang='stylus' scoped>
 @require '~@/assets/styles/entry/_variable.styl';
 
-#home {}
+#home
 </style>
