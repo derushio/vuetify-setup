@@ -1,4 +1,5 @@
 require('dotenv').config();
+const webpack = require('webpack');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const isProduct = process.env.NODE_ENV == 'production';
@@ -24,6 +25,14 @@ module.exports = {
             },
             mainFields: ['browser', 'main', 'module'],
         },
+
+        plugins: [
+            new webpack.DefinePlugin({
+                'process.env': {
+                    NODE_ENV: `"${process.env.NODE_ENV}"`,
+                },
+            }),
+        ],
 
         optimization: {
             minimizer: [
