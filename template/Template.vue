@@ -12,5 +12,5 @@ export default class CLASS_NAME extends Vue {}
 <style lang='stylus' scoped>
 @require '~@/assets/styles/entry/_variable.styl';
 
-.VUE_NAME
+.VUE_NAME {}
 </style>
